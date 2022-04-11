@@ -29,8 +29,10 @@ def edit_tutor(request, id):
     tutor = Tutor_Info.objects.get(id=id_id)
     return render(request, 'edit_tutor.html', context = {'tutor': tutor})
 
-def delete_tutor(request):
-    return HttpResponse('Delete')
+def delete_tutor(request, id):
+    tutor = Tutor_Info.objects.get(id=id)
+    tutor.delete()
+    return redirect('/tutor')
 
 def update_tutor(request, id):
     tutor = Tutor_Info.objects.get(id=id)
