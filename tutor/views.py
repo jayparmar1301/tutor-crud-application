@@ -25,8 +25,7 @@ def add_tutor_page(request):
     return render(request, 'add_tutor.html')
 
 def edit_tutor(request, id):
-    id_id = id
-    tutor = Tutor_Info.objects.get(id=id_id)
+    tutor = Tutor_Info.objects.get(id=id)
     return render(request, 'edit_tutor.html', context = {'tutor': tutor})
 
 def delete_tutor(request, id):
