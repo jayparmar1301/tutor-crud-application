@@ -38,7 +38,6 @@ def update_tutor(request, id):
     tutor = Tutor_Info.objects.get(id=id)
     tutor.first_name = request.GET.get('first_name') if request.GET.get('first_name')!= None else tutor.first_name
     tutor.last_name = request.GET.get('last_name') if request.GET.get('last_name')!= None else tutor.last_name
-    tutor.email = request.GET.get('email') if request.GET.get('email')!= None else tutor.email
     tutor.tutor_skills = request.GET.get('tutor_skills') if request.GET.get('tutor_skills') else tutor.tutor_skills
     tutor.tutor_exp = request.GET.get('tutor_exp') if request.GET.get('tutor_exp') else tutor.tutor.exp
     tutor.save()
