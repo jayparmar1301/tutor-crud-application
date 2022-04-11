@@ -40,8 +40,8 @@ a {
             <td> {{ tutor.email }} </td>
             <td> {{ tutor.tutor_skills }} </td>
             <td> {{ tutor.tutor_exp }} </td>
-            <th> <a> Edit </a></th>
-            <th> <a> Delete </a></th>            
+            <th> <a href="/tutor/edit/{{ tutor.id }}"> Edit </a></th>
+            <th> <a href="/tutor/edit/{{ tutor.id }}"> Delete </a></th>
         </tr>
         {% endfor %}
     </tbody>
