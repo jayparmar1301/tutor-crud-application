@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Homepage
+{% endblock title %}
+
+{% block css%}
+<style>
+body {
+    background: darkslategrey !important;
+}
+
+#error-block {
+    border: 1px solid red;
+    width: 750px;
+    max-width: 850px;
+    margin: 12% auto;
+    height: 250;
+}
+
+</style>
+{% endblock css%}
+
+{% block content %}
+<div id="error-block">
+    <h2 style="margin: 15% auto;text-align: center;color: red;"> Something Went Wrong! {{ error }}</h2>
+</div>
+{% endblock content %}
