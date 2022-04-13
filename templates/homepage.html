@@ -29,6 +29,7 @@ Homepage
             <th>Name</th>
             <th>Email</th>
             <th>Skills</th>
+            <th>Courses</th>
             <th>Teaching Experience</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -41,6 +42,7 @@ Homepage
             <td> {{ tutor.first_name }} {{ tutor.last_name}} </td>
             <td> {{ tutor.email }} </td>
             <td> {{ tutor.tutor_skills }} </td>
+            <td><a href="/courses/{{ tutor.id }}"> Courses </a></td>
             <td> {{ tutor.tutor_exp }} </td>
             <th> <a href="/tutor/edit/{{ tutor.id }}"> Edit </a></th>
             <th> <a href="/tutor/delete/{{ tutor.id }}"> Delete </a></th>
