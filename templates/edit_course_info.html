@@ -11,40 +11,59 @@ body {
     background: darkslategrey !important;
 }
     
-#form {
+#form1 {
     border: 2px solid white !important;
     max-width: 750px;
     padding: 20px;
-    margin: 12% auto;
-    width: 450px;
+    margin: 2% auto;
+    padding-top: 0px;
  }
 
- label {
-    width: 50% !important;
+label {
+    width: 40% !important;
     float: left;
     color: white;
- }
+    font-size: 18px;
+    font-weight: 400 !important;
+}
 
- input[type="submit"] {
+input {
+    width: 60%;
+}
+
+input[type="submit"] {
     width: 50%;
     border: none;
     background: #4fbbf1;
     padding: 8px;
     border-radius: 8px;
 }
+
+.course-div {
+    padding: 20px 0px;
+}
 </style>
 {% endblock css%}
 
 {% block content %}
-<form id="form" action="/courses/edit/{{ course.id}}/submit">    
+<h2 style="text-align: center;color: gainsboro;"> Edit Course Info here</h2>
+
+<form id="form1" action="/courses/edit/{{ course.id}}/submit"> 
+
+    <div class="course-div">
     <label for="course_name">Course name:</label>
     <input type="text" id="course_name" name="course_name" value="{{ course.course_name }}"><br><br>
-    
+    </div>
+
+    <div class="course-div">
     <label for="course_duration">Course Duration (HH):</label>
     <input type="text" id="course_duration" name="course_duration" value="{{ course.course_duration }}"><br><br>
+    </div>
 
+    <div class="course-div">
     <label for="course_description">Course Description:</label>
-    <textarea style="width: 182px;" id="course_description" name="course_description" value="{{ course.course_description}}">{{ course.course_description}}</textarea><br><br>
+    <textarea style="width: 60%;" id="course_description" name="course_description" value="{{ course.course_description}}">{{ course.course_description}}</textarea><br><br>
+    </div>
 
     <div style="text-align: center;"> <input type="submit" value="Submit">   </div>
   </form> 

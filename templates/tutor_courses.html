@@ -6,22 +6,42 @@ Homepage
 
 {% block css%}
 <style>
-#new-course{
+body{
+    background: darkslategrey !important;
+}
+
+#new-course, #tutor-link{
     border: none;
     padding: 8px;
     margin-bottom: 10px;
     margin-right: 10px;
-    background: #50b9f7;
+    background: white;
     float: right;
     text-decoration: none;
-    color:white;
+    color:black;
 }
+
+#tutor-link{
+    float: left;
+    margin-left: 10px;
+}
+
+#course-table-div{
+    margin: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    background: white;
+}
+
 </style>
 {% endblock css%}
 
 {% block content %}
-<a id="new-course" href="add?id={{ tutor_id }}"> Add Course </a>
-<div style="margin: 10px;">
+<a id="new-course" href="add?id={{ tutor.id }}"> Add Course </a>
+<a id="tutor-link" href="/tutor"> Go to Tutor </a>
+
+<h2 style="text-align: center;color: rgb(255, 251, 251);">This course is offered by {{ tutor.first_name }} {{ tutor.last_name }}</h2>
+<div id="course-table-div">
 <table id="table_id" class="table table-striped table-bordered">
     <thead>
         <tr>

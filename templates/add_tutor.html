@@ -15,17 +15,22 @@ body {
     border: 2px solid white !important;
     max-width: 750px;
     padding: 20px;
-    margin: 12% auto;
-    width: 450px;
- }
+    margin: 2% auto;
+}
 
- label {
-    width: 50% !important;
+label {
+    width: 40% !important;
     float: left;
     color: white;
- }
+    font-size: 18px;
+    font-weight: 400 !important;
+}
 
- input[type="submit"] {
+input {
+    width: 60%;
+}
+
+input[type="submit"] {
     width: 50%;
     border: none;
     background: #4fbbf1;
@@ -36,6 +41,8 @@ body {
 {% endblock css%}
 
 {% block content %}
+<h2 style="text-align: center;color: gainsboro;"> Add New Tutor here</h2>
+
 <form id="form" action="/tutor/add/tutor">
     <label for="first_name">First name:</label>
     <input type="text" id="first_name" name="first_name"><br><br>
@@ -47,7 +54,7 @@ body {
     <input type="email" id="email" name="email" ><br><br>
 
     <label for="tutor_skills">Skils:</label>
-    <textarea style="width: 182px;" id="tutor_skills" name="tutor_skills" ></textarea><br><br>
+    <textarea style="width: 60%;" id="tutor_skills" name="tutor_skills" ></textarea><br><br>
     
     <label for="tutor_exp">Total Experience:</label>
     <input type="text" id="tutor_exp" name="tutor_exp" ><br><br>
