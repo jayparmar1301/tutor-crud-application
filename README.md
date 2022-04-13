@@ -59,3 +59,7 @@ Project Screen
 
 6) Update Course info of Tutor
 <kbd> <img src="https://user-images.githubusercontent.com/43089083/163133635-16bebe87-e2cc-40a3-99d7-06e157326a58.PNG" /> </kbd>
+
+7) Error Message
+<kbd> <img src="https://user-images.githubusercontent.com/43089083/163139767-c7b1756e-7887-4951-a5bb-c8e39135854a.png" /> </kbd>
+
