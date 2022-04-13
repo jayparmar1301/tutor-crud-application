@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Homepage
+{% endblock title %}
+
+{% block css%}
+<style>
+#new-course{
+    border: none;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background: #50b9f7;
+    float: right;
+    text-decoration: none;
+    color:white;
+}
+</style>
+{% endblock css%}
+
+{% block content %}
+<a id="new-course" href="add"> Add Course </a>
+<div style="margin: 10px;">
+<table id="table_id" class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th style="display: none;">ID</th>
+            <th>Course Name</th>
+            <th>Course Description</th>
+            <th>Course Duration</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for course in courses %}
+        <tr>
+            <td style="display: none;"> </td>
+            <th>{{course.course_name}}</th>
+            <th>{{course.course_description}}</th>
+            <th>{{course.course_duration}}</th>
+            <th>Course Name</th>
+            <th>Course Description</th>           
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#table_id').DataTable();
+    });
+</script>
+{% endblock content %}
