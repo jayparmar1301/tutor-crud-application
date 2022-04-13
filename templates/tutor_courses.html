@@ -41,7 +41,7 @@ Homepage
             <th>{{course.course_description}}</th>
             <th>{{course.course_duration}}</th>
             <th><a href="/courses/edit/{{ course.id}}">  Edit </a></th>
-            <th>Course Description</th>           
+            <th><a href="/courses/delete/{{ course.id}}">  Delete </a></th>
         </tr>
         {% endfor %}
     </tbody>

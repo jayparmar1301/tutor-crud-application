@@ -37,3 +37,9 @@ def update_course(request, id):
     course.course_description = request.GET.get('course_description') if request.GET.get('course_description') else course.course_description
     course.save()
     return redirect(f'/courses/{course.tutor_id.id}')
+
+def delete_course(request, id):
+    course = Course_Info.objects.get(id=id)
+    tutor_id = course.tutor_id.id
+    course.delete()
+    return redirect(f'/courses/{tutor_id}')

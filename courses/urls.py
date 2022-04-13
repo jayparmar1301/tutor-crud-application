@@ -10,5 +10,5 @@ urlpatterns = [
     path('edit/<int:id>', views.edit_course),
     path('edit/<int:id>/submit', views.update_course),
 
-    # path('delete/<int:id>', views.delete_tutor)
+    path('delete/<int:id>', views.delete_course)
 ]
