@@ -40,7 +40,7 @@ Homepage
             <th>{{course.course_name}}</th>
             <th>{{course.course_description}}</th>
             <th>{{course.course_duration}}</th>
-            <th>Course Name</th>
+            <th><a href="/courses/edit/{{ course.id}}">  Edit </a></th>
             <th>Course Description</th>           
         </tr>
         {% endfor %}

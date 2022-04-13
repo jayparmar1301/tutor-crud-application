@@ -7,10 +7,8 @@ urlpatterns = [
     path('add', views.add_course_page),
     path('add/new', views.add_new_course),
 
-    # #path('add/tutor', views.add_tutor),
-
-    # path('edit/<int:id>', views.edit_course),
-    # path('edit/<int:id>/submit', views.update_tutor),
+    path('edit/<int:id>', views.edit_course),
+    path('edit/<int:id>/submit', views.update_course),
 
     # path('delete/<int:id>', views.delete_tutor)
 ]
