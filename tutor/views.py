@@ -52,8 +52,8 @@ def delete_tutor(request, id):
 def update_tutor(request, id):
     try:
         tutor = Tutor_Info.objects.get(id=id)
-        tutor.first_name = request.GET.get('first_name') if request.GET.get('first_name')!= None else tutor.first_name
-        tutor.last_name = request.GET.get('last_name') if request.GET.get('last_name')!= None else tutor.last_name
+        tutor.first_name = request.GET.get('first_name') if request.GET.get('first_name') is not None else tutor.first_name
+        tutor.last_name = request.GET.get('last_name') if request.GET.get('last_name') is not None else tutor.last_name
         tutor.tutor_skills = request.GET.get('tutor_skills') if request.GET.get('tutor_skills') else tutor.tutor_skills
         tutor.tutor_exp = request.GET.get('tutor_exp') if request.GET.get('tutor_exp') else tutor.tutor.exp
         tutor.save()
